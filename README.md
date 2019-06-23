@@ -65,39 +65,40 @@ class App extends Component {
 
 ## Props
 
-| Name                 | Type              | Description | Default |
-| -------------------- | ----------------- | ----------- | ------- |
-| mapboxApiAccessToken | (required) string | [Mapbox Access Token](https://www.mapbox.com/help/define-access-token/) | - |
-| timeout              | int               | Debounce between pressing the key and quering the results | 300 |
-| viewport | object | [Map Viewport](https://uber.github.io/react-map-gl/#/documentation/api-reference/static-map?section=map-state) | - |
-| onSelected | (required) function(viewport, item) | Receives selected item and the viewport to set for the selected [item](https://www.mapbox.com/api-documentation/?language=JavaScript#response-object) | - |
-| transitionDuration | int | Duration of the smooth transition | 0 |
-| hideOnSelect | bool | Whether to hide results on select or not | false |
-| pointZoom | int | Zoom to set if a specific location (without bbox) is selected | 16 |
-| formatItem | function(item) | Function used for formatting results | item => item.place_name |
-| className | string | Class to add to the top component | - |
-| queryParams | object | Query parameters to use when searching of the results, you can see available options [here](https://www.mapbox.com/api-documentation/?language=JavaScript#search-for-places) | - |
-| limit | int | Limit of the results | 5 |
-| localGeocoder | function(queryString) | Function to supplement local results to geocoder | - |
+| Name                 | Type                                | Description                                                                                                                                                                  | Default                 |
+| -------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| mapboxApiAccessToken | (required) string                   | [Mapbox Access Token](https://www.mapbox.com/help/define-access-token/)                                                                                                      | -                       |
+| timeout              | int                                 | Debounce between pressing the key and quering the results                                                                                                                    | 300                     |
+| viewport             | object                              | [Map Viewport](https://uber.github.io/react-map-gl/#/documentation/api-reference/static-map?section=map-state)                                                               | -                       |
+| onSelected           | (required) function(viewport, item) | Receives selected item and the viewport to set for the selected [item](https://www.mapbox.com/api-documentation/?language=JavaScript#response-object)                        | -                       |
+| transitionDuration   | int                                 | Duration of the smooth transition                                                                                                                                            | 0                       |
+| hideOnSelect         | bool                                | Whether to hide results on select or not                                                                                                                                     | false                   |
+| pointZoom            | int                                 | Zoom to set if a specific location (without bbox) is selected                                                                                                                | 16                      |
+| formatItem           | function(item)                      | Function used for formatting results                                                                                                                                         | item => item.place_name |
+| className            | string                              | Class to add to the top component                                                                                                                                            | -                       |
+| queryParams          | object                              | Query parameters to use when searching of the results, you can see available options [here](https://www.mapbox.com/api-documentation/?language=JavaScript#search-for-places) | -                       |
+| limit                | int                                 | Limit of the results                                                                                                                                                         | 5                       |
+| placeholder          | string                              | Placeholder text for geocoder field                                                                                                                                          | -                       |
+| localGeocoder        | function(queryString)               | Function to supplement local results to geocoder                                                                                                                             | -                       |
 
 ## Styling
 
 This component does NOT come with any styles. You can style it yourself by using classes:
 
-| Class name | Description |
-| --- | --- |
-| .react-geocoder | component wrapper class |
-| .react-geocoder-results | results wrapper class |  
-| .react-geocoder-item | single result class |
+| Class name              | Description             |
+| ----------------------- | ----------------------- |
+| .react-geocoder         | component wrapper class |
+| .react-geocoder-results | results wrapper class   |
+| .react-geocoder-item    | single result class     |
 
 ### Replacing components
 
 You can even supplement your own components:
 
-| Property name | Passed Properties | Properties description |
-| --- | --- | --- |
-| inputComponent | onChange | Function to call when the text changes |
-| itemComponent | [item](https://www.mapbox.com/api-documentation/?language=JavaScript#response-object), onClick, children | children is item formatted to display | 
+| Property name  | Passed Properties                                                                                        | Properties description                 |
+| -------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| inputComponent | onChange                                                                                                 | Function to call when the text changes |
+| itemComponent  | [item](https://www.mapbox.com/api-documentation/?language=JavaScript#response-object), onClick, children | children is item formatted to display  |
 
 ## License
 
